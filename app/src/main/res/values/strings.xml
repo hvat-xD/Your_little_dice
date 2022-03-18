@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Your_little_dice</string>
     <string name="battonText">roll</string>
+    <string name="dicedescription">It`s a dice</string>
 </resources>
