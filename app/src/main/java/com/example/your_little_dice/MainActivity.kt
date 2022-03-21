@@ -1,16 +1,25 @@
 package com.example.your_little_dice
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.your_little_dice.databinding.ActivityMainBinding
-
+private const val TAG = "MainActivity"
 class MainActivity : AppCompatActivity() {
-    public var flagForToast = false
+    fun logging(){
+        Log.e(TAG, "ERROR: a serious error like an app crash")
+        Log.w(TAG, "WARN: warns about the potential for serious errors")
+        Log.i(TAG, "INFO: reporting technical information, such as an operation succeeding")
+        Log.d(TAG, "DEBUG: reporting technical information useful for debugging")
+        Log.v(TAG, "VERBOSE: more verbose than DEBUG logs")
+    }
+    var flagForToast = false
     //binding for convenient coding
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        logging()
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
